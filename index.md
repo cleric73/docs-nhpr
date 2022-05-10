@@ -1,9 +1,7 @@
-## The National Health Products Registry
-### API - Documentation
+## The National Health Products Registry (NHPR)
+### API - Reference
 
-You can use the [editor on GitHub](https://github.com/cleric73/docs-nhpr/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The NHPR API is organized around REST. Our API has predictable resource-oriented URLs, accepts raw JSON request bodies, uses route parameters instead of query parameters for queries, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
 ### Markdown
 
