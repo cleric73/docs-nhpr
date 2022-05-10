@@ -5,7 +5,7 @@ The NHPR API is organized around REST. Our API has predictable resource-oriented
 
 ### Contents
 
-1. Authorization
+1. [Authorization](/authorization)
 2. Errors
 3. Product identifications
 4. Core resources
