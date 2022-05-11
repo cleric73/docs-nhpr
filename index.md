@@ -37,3 +37,38 @@ Errors can be programatically tracked by the `success` field of the response bod
 NHPR uses `uuidv4` for all generated product unique identifiers.
 
 ### Core Resources
+
+#### Generic Products
+
+Generic Products represents a raw/main material used to represent a packaged or measured amount of a known substance.
+
+#### The generic product object
+
+All results of the requests conform to the minimum Data Specifications for the Health Products Registry.
+
+```markdown
+{
+    "medicineGenericProductKey": "7b20c321-cdf9-4576-857d-b574798559b7",
+    "medicineIndexKey": null,
+    "nationalProductCode": null,
+    "dataLifePhase": "0",
+    "genericName": "MULTI-INGREDIENT",
+    "productForm": "AEROSOLS",
+    "productDescription": "MULTI-INGREDIENT MULTI-INGREDIENT AEROSOLS",
+    "strength": "MULTI-INGREDIENT",
+    "activeIngredient": "MULTI-INGREDIENT",
+    "dosageForm": "TOPICAL EXTERNAL PRESSURISED AEROSOLS    ",
+    "routeOfAdministration": "EXTERNAL",
+    "venClassification": "Non-Essential",
+    "unspscCode": null,
+    "gpcCode": null,
+    "atcCode": null,
+    "productActivation": true,
+    "productActivationDate": "1997-07-01T00:00:00.000Z",
+    "currentApprovalStatus": "Drafting",
+    "nextApprovalStatus": "Submitted",
+    "createdAt": "2022-01-19T00:00:00.000Z",
+    "updatedAt": "2022-05-06T05:59:14.423Z",
+    "MedicineTradeItems": []
+}
+```
