@@ -27,3 +27,7 @@ Requests that result into logical errors but fail to return expected results wil
     "message": "One or more missing mandatory fields."
 }
 ```
+
+#### Error handling
+
+Errors can be programatically tracked by the `success` field of the response body.
