@@ -71,3 +71,13 @@ All results of the requests conform to the minimum Data Specifications for the H
     "MedicineTradeItems": []
 }
 ```
+
+#### Endpoints
+```markdown
+  GET /nhpr/api/v1/medicines/genericproducts/all
+  GET /nhpr/api/v1/medicines/genericproducts/all
+  GET /nhpr/api/v1/medicines/genericproducts/all
+  GET /nhpr/api/v1/medicines/genericproducts/all
+  GET /nhpr/api/v1/medicines/genericproducts/all
+  GET /nhpr/api/v1/medicines/genericproducts/all
+```
