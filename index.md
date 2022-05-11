@@ -13,3 +13,10 @@ The NHPR API is organized around REST. Our API has predictable resource-oriented
   - Trade item
   - Substance
   - Medication
+
+### Authorization
+
+
+### Errors
+
+NHPR uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 5xx range indicate an error with NHPR's servers.
