@@ -87,3 +87,5 @@ PUT /nhpr/api/v1/medicines/genericproducts/deactivate/:id
 PUT /nhpr/api/v1/medicines/genericproducts/activate/:id
 POST /nhpr/api/v1/medicines/genericproducts/
 ```
+
+#### Create a generic product
