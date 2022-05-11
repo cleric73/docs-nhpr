@@ -34,3 +34,4 @@ Errors can be programatically tracked by the `success` field of the response bod
 
 ### Product identifications
 
+NHPR uses `uuidv4` for all generated product unique identifiers.
