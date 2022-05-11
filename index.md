@@ -327,7 +327,7 @@ Response body
 
 ----
 #### List all active generic products
-Returns a list of generic products whose `activationStatus` is `active`. A product is considered to be active if it has been submitted to the approver and is approved and activated.
+Returns a list of generic products whose `productActivation` is `active`. A product is considered to be active if it has been submitted to the approver and is approved and activated.
 
 The active status is an indication that the product is in active use within the country.
 
