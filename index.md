@@ -420,3 +420,37 @@ Response body
     }
 }
 ```
+
+----
+#### Update generic product
+Update generic product data.
+The complete generic product data with the product id (medicineGenericProductKey)
+
+```markdown
+PUT /nhpr/api/v1/medicines/genericproducts/update
+```
+
+Request body
+```markdown
+{
+        "product": {
+                "medicineGenericProductKey": "e985e1b5-74a3-4586-b13e-bb60e85da6c2",
+                "medicineIndexKey": null,
+                "nationalProductCode": null,
+                "dataLifePhase": "0",
+                "genericName": "WATER FOR INJECTION",
+                "productForm": "AMPOULE",
+                "productDescription": "WATER FOR INJECTION N/A AMPOULE",
+                "strength": "N/A",
+                "activeIngredient": "WATER FOR INJECTION",
+                "dosageForm": "PARENTERAL ORDINARY AMPOULES     ",
+                "routeOfAdministration": "PARENTERAL",
+                "venClassification": "Essential",
+                "unspscCode": null,
+                "gpcCode": null,
+                "atcCode": null,
+                "currentApprovalStatus": "Submitted"
+        }
+    }
+}
+```
