@@ -19,4 +19,5 @@ The NHPR API is organized around REST. Our API has predictable resource-oriented
 
 ### Errors
 
-NHPR uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `5xx` range indicate an error with NHPR's servers. All requests successfully processed by the server that do not case a server crash (error `5xx`) will return return with error codes in the `2xx` range with a `data` field in the body. Requests that result into logical errors but fail to return expected results will still return with a `2xx` code but will have a `false` success state with a `message` field decribing the error.
+NHPR uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `5xx` range indicate an error with NHPR's servers. All requests successfully processed by the server that do not case a server crash (error `5xx`) will return return with error codes in the `2xx` range with a `data` field in the body. 
+Requests that result into logical errors but fail to return expected results will still return with a `2xx` code but will have a `false` success state with a `message` field decribing the error.
