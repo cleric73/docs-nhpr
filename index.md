@@ -372,3 +372,51 @@ Response body
     }
 }
 ```
+
+----
+#### List all deactivated generic products
+Returns a list of generic products whose `productActivation` is `false`. A product is considered to be deactivated if it has not yet be activated by an approver or was previously active then deactivated by the approver..
+
+The product is then considered to not be in active use in the country.
+
+```markdown
+GET /nhpr/api/v1/medicines/genericproducts/deactivated
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 7,
+        "products": [
+            {
+                "medicineGenericProductKey": "e985e1b5-74a3-4586-b13e-bb60e85da6c2",
+                "medicineIndexKey": null,
+                "nationalProductCode": null,
+                "dataLifePhase": "0",
+                "genericName": "WATER FOR INJECTION",
+                "productForm": "AMPOULE",
+                "productDescription": "WATER FOR INJECTION N/A AMPOULE",
+                "strength": "N/A",
+                "activeIngredient": "WATER FOR INJECTION",
+                "dosageForm": "PARENTERAL ORDINARY AMPOULES     ",
+                "routeOfAdministration": "PARENTERAL",
+                "venClassification": "Essential",
+                "unspscCode": null,
+                "gpcCode": null,
+                "atcCode": null,
+                "productActivation": false,
+                "productActivationDate": "1997-07-01T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-01-19T00:00:00.000Z",
+                "updatedAt": "2022-01-19T00:00:00.000Z"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
