@@ -142,3 +142,44 @@ Response body
     }
 }
 ```
+
+----
+#### Retrieve generic product
+Retrieves generic product object based on generic product key supplied as route parameter
+
+```markdown
+GET /nhpr/api/v1/medicines/genericproducts/id/:id
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": {
+            "medicineGenericProductKey": "7b20c321-cdf9-4576-857d-b574798559b7",
+            "medicineIndexKey": null,
+            "nationalProductCode": null,
+            "dataLifePhase": "0",
+            "genericName": "MULTI-INGREDIENT",
+            "productForm": "AEROSOLS",
+            "productDescription": "MULTI-INGREDIENT MULTI-INGREDIENT AEROSOLS",
+            "strength": "MULTI-INGREDIENT",
+            "activeIngredient": "MULTI-INGREDIENT",
+            "dosageForm": "TOPICAL EXTERNAL PRESSURISED AEROSOLS    ",
+            "routeOfAdministration": "EXTERNAL",
+            "venClassification": "Non-Essential",
+            "unspscCode": null,
+            "gpcCode": null,
+            "atcCode": null,
+            "productActivation": true,
+            "productActivationDate": "1997-07-01T00:00:00.000Z",
+            "currentApprovalStatus": "Drafting",
+            "nextApprovalStatus": "Submitted",
+            "createdAt": "2022-01-19T00:00:00.000Z",
+            "updatedAt": "2022-05-06T05:59:14.423Z",
+            "MedicineTradeItems": []
+        }
+    }
+}
+```
