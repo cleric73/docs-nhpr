@@ -85,14 +85,14 @@ PUT /nhpr/api/v1/medicines/genericproducts/approve/:id
 PUT /nhpr/api/v1/medicines/genericproducts/decline/:id
 PUT /nhpr/api/v1/medicines/genericproducts/deactivate/:id
 PUT /nhpr/api/v1/medicines/genericproducts/activate/:id
-POST /nhpr/api/v1/medicines/genericproducts/
+POST /nhpr/api/v1/medicines/genericproducts/create
 ```
 
 #### Create a generic product
 Creates a new generic product object
 
 ```markdown
-POST /nhpr/api/v1/medicines/genericproducts/
+POST /nhpr/api/v1/medicines/genericproducts/create
 ```
 
 Request body
@@ -110,6 +110,35 @@ Request body
         "unspscCode": 12345,
         "gpcCode": 123456,
         "atcCode": 1234567
+    }
+}
+```
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": {
+            "medicineGenericProductKey": "16b5c6a6-9a4c-48ff-bf84-238dc6ddcd8a",
+            "medicineIndexKey": "M_Avs4ABDJCaFHJgH6p3",
+            "nationalProductCode": "",
+            "dataLifePhase": "draft",
+            "productActivation": false,
+            "currentApprovalStatus": "Drafting",
+            "nextApprovalStatus": "",
+            "genericName": "test generic name",
+            "productForm": "test product form",
+            "productDescription": "test product description",
+            "strength": "test strength",
+            "activeIngredient": "test active ingredient",
+            "dosageForm": "test dosage form",
+            "routeOfAdministration": "test route of administration",
+            "venClassification": "Essential",
+            "unspscCode": "12345",
+            "gpcCode": "123456",
+            "atcCode": "1234567",
+            "productActivationDate": null
+        }
     }
 }
 ```
