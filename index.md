@@ -324,3 +324,51 @@ Response body
     }
 }
 ```
+
+----
+#### List all active generic products
+Returns a list of generic products whose `activationStatus` is `active`. A product is considered to be active if it has been submitted to the approver and is approved and activated.
+
+The active status is an indication that the product is in active use within the country.
+
+```markdown
+GET /nhpr/api/v1/medicines/genericproducts/active
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 7,
+        "products": [
+            {
+                "medicineGenericProductKey": "e985e1b5-74a3-4586-b13e-bb60e85da6c2",
+                "medicineIndexKey": null,
+                "nationalProductCode": null,
+                "dataLifePhase": "0",
+                "genericName": "WATER FOR INJECTION",
+                "productForm": "AMPOULE",
+                "productDescription": "WATER FOR INJECTION N/A AMPOULE",
+                "strength": "N/A",
+                "activeIngredient": "WATER FOR INJECTION",
+                "dosageForm": "PARENTERAL ORDINARY AMPOULES     ",
+                "routeOfAdministration": "PARENTERAL",
+                "venClassification": "Essential",
+                "unspscCode": null,
+                "gpcCode": null,
+                "atcCode": null,
+                "productActivation": true,
+                "productActivationDate": "1997-07-01T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-01-19T00:00:00.000Z",
+                "updatedAt": "2022-01-19T00:00:00.000Z"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
