@@ -75,9 +75,15 @@ All results of the requests conform to the minimum Data Specifications for the H
 #### Endpoints
 ```markdown
   GET /nhpr/api/v1/medicines/genericproducts/all
-  GET /nhpr/api/v1/medicines/genericproducts/all
-  GET /nhpr/api/v1/medicines/genericproducts/all
-  GET /nhpr/api/v1/medicines/genericproducts/all
-  GET /nhpr/api/v1/medicines/genericproducts/all
-  GET /nhpr/api/v1/medicines/genericproducts/all
+  GET /nhpr/api/v1/medicines/genericproducts/drafts
+  GET /nhpr/api/v1/medicines/genericproducts/approved
+  GET /nhpr/api/v1/medicines/genericproducts/active
+  GET /nhpr/api/v1/medicines/genericproducts/deactivated
+  GET /nhpr/api/v1/medicines/genericproducts/id/:id
+  POST /nhpr/api/v1/medicines/genericproducts/
+  PUT /nhpr/api/v1/medicines/genericproducts/update
+  PUT /nhpr/api/v1/medicines/genericproducts/approve/:id
+  PUT /nhpr/api/v1/medicines/genericproducts/decline/:id
+  PUT /nhpr/api/v1/medicines/genericproducts/deactivate/:id
+  PUT /nhpr/api/v1/medicines/genericproducts/activate/:id
 ```
