@@ -89,3 +89,4 @@ POST /nhpr/api/v1/medicines/genericproducts/
 ```
 
 #### Create a generic product
+Creates a new generic product object
