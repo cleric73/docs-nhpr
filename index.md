@@ -87,7 +87,7 @@ PUT /nhpr/api/v1/medicines/genericproducts/deactivate/:id
 PUT /nhpr/api/v1/medicines/genericproducts/activate/:id
 POST /nhpr/api/v1/medicines/genericproducts/create
 ```
-
+----
 #### Create a generic product
 Creates a new generic product object
 
@@ -180,6 +180,147 @@ Response body
             "updatedAt": "2022-05-06T05:59:14.423Z",
             "MedicineTradeItems": []
         }
+    }
+}
+```
+
+----
+#### List all generic products
+Returns a list of generic products.
+
+```markdown
+GET /nhpr/api/v1/medicines/genericproducts/all
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 1701,
+        "products": [
+            {
+                "medicineGenericProductKey": "e985e1b5-74a3-4586-b13e-bb60e85da6c2",
+                "medicineIndexKey": null,
+                "nationalProductCode": null,
+                "dataLifePhase": "0",
+                "genericName": "WATER FOR INJECTION",
+                "productForm": "AMPOULE",
+                "productDescription": "WATER FOR INJECTION N/A AMPOULE",
+                "strength": "N/A",
+                "activeIngredient": "WATER FOR INJECTION",
+                "dosageForm": "PARENTERAL ORDINARY AMPOULES     ",
+                "routeOfAdministration": "PARENTERAL",
+                "venClassification": "Essential",
+                "unspscCode": null,
+                "gpcCode": null,
+                "atcCode": null,
+                "productActivation": true,
+                "productActivationDate": "1997-07-01T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-01-19T00:00:00.000Z",
+                "updatedAt": "2022-01-19T00:00:00.000Z"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+
+----
+#### List all generic products under drafting
+Returns a list of generic products whose `currentApprovalSttus` is `drafting`. A product is considered to be under drafting if it has not yet been submitted to the approver for review and approval. 
+
+```markdown
+GET /nhpr/api/v1/medicines/genericproducts/drafting
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 7,
+        "products": [
+            {
+                "medicineGenericProductKey": "e985e1b5-74a3-4586-b13e-bb60e85da6c2",
+                "medicineIndexKey": null,
+                "nationalProductCode": null,
+                "dataLifePhase": "0",
+                "genericName": "WATER FOR INJECTION",
+                "productForm": "AMPOULE",
+                "productDescription": "WATER FOR INJECTION N/A AMPOULE",
+                "strength": "N/A",
+                "activeIngredient": "WATER FOR INJECTION",
+                "dosageForm": "PARENTERAL ORDINARY AMPOULES     ",
+                "routeOfAdministration": "PARENTERAL",
+                "venClassification": "Essential",
+                "unspscCode": null,
+                "gpcCode": null,
+                "atcCode": null,
+                "productActivation": true,
+                "productActivationDate": "1997-07-01T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-01-19T00:00:00.000Z",
+                "updatedAt": "2022-01-19T00:00:00.000Z"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### List all approved generic products
+Returns a list of generic products whose `currentApprovalSttus` is `approved`. A product's data is considered to be approved if it has been submitted to the approver and is approved.
+
+The approval status is an acknowledgement of the accuracy of the product data by an appropriate user (the approver)
+
+```markdown
+GET /nhpr/api/v1/medicines/genericproducts/approved
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 7,
+        "products": [
+            {
+                "medicineGenericProductKey": "e985e1b5-74a3-4586-b13e-bb60e85da6c2",
+                "medicineIndexKey": null,
+                "nationalProductCode": null,
+                "dataLifePhase": "0",
+                "genericName": "WATER FOR INJECTION",
+                "productForm": "AMPOULE",
+                "productDescription": "WATER FOR INJECTION N/A AMPOULE",
+                "strength": "N/A",
+                "activeIngredient": "WATER FOR INJECTION",
+                "dosageForm": "PARENTERAL ORDINARY AMPOULES     ",
+                "routeOfAdministration": "PARENTERAL",
+                "venClassification": "Essential",
+                "unspscCode": null,
+                "gpcCode": null,
+                "atcCode": null,
+                "productActivation": true,
+                "productActivationDate": "1997-07-01T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-01-19T00:00:00.000Z",
+                "updatedAt": "2022-01-19T00:00:00.000Z"
+            },
+            .
+            .
+            .
+        ]
     }
 }
 ```
