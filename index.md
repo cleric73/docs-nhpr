@@ -40,7 +40,7 @@ NHPR uses `uuidv4` for all generated product unique identifiers.
 
 #### Generic Products
 
-Generic Products represents a raw/main material used to represent a packaged or measured amount of a known substance.
+Generic Products represents a raw/main material used to represent a packaged or measured amount of a known substance, an ingredient of an actively traded medication on the market.
 
 #### The generic product object
 
