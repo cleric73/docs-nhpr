@@ -90,3 +90,26 @@ POST /nhpr/api/v1/medicines/genericproducts/
 
 #### Create a generic product
 Creates a new generic product object
+
+```markdown
+POST /nhpr/api/v1/medicines/genericproducts/
+```
+
+Request body
+```markdown
+{
+    "product": {
+        "genericName": "test generic name",
+        "productForm": "test product form",
+        "productDescription": "test product description",
+        "strength": "test strength",
+        "activeIngredient": "test active ingredient",
+        "dosageForm": "test dosage form",
+        "routeOfAdministration": "test route of administration",
+        "venClassification": "Essential",
+        "unspscCode": 12345,
+        "gpcCode": 123456,
+        "atcCode": 1234567
+    }
+}
+```
