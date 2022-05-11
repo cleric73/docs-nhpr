@@ -24,6 +24,6 @@ Requests that result into logical errors but fail to return expected results wil
 ```markdown
 {
     "success": false,
-    "data": "One or more missing mandatory fields."
+    "message": "One or more missing mandatory fields."
 }
 ```
