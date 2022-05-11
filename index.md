@@ -9,10 +9,10 @@ The NHPR API is organized around REST. Our API has predictable resource-oriented
 2. Errors
 3. Product identifications
 4. Core resources
-  - Generic product
-  - Trade item
-  - Substance
-  - Medication
+- Generic product
+- Trade item
+- Substance
+- Medication
 
 ### Authorization
 
@@ -31,3 +31,6 @@ Requests that result into logical errors but fail to return expected results wil
 #### Error handling
 
 Errors can be programatically tracked by the `success` field of the response body.
+
+### Product identifications
+
