@@ -550,3 +550,77 @@ The `data` field returns the number of records updated wich is `1`
     }
 }
 ```
+
+#### Trade Items
+
+The medication resource represents an actual medication that can be given to a patient and is traded on the market.
+
+Trade items are products that contain a given generic product. Hence may contain a reference to a generic product.
+
+#### The generic product object
+
+All results of the requests conform to the minimum Data Specifications for the Health Products Registry.
+
+```markdown
+{
+    "medicineTradeItemKey": "0002da35-7137-4e19-b86b-312d3c85959c",
+    "dataLifePhase": null,
+    "medicineIndexKey": null,
+    "matchedToGenericProduct": true,
+    "ndaRegNumber": "NDA/MAL/HDP/6992",
+    "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+    "ndaExpirationDate": null,
+    "tradeItemDescription": null,
+    "packaging": "1.0X15.0 ML BOTTLE",
+    "content": null,
+    "packMeasure": null,
+    "packCount": null,
+    "unitMeasure": null,
+    "unitCount": null,
+    "unitSize": null,
+    "brandName": "AZIRIV-200",
+    "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+    "brandOwnerLocation": "UGANDA",
+    "brandOwnerGLN": null,
+    "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+    "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+    "manufacturerLocation": "INDIA",
+    "manufacturerGLN": null,
+    "manufacturerPartNUM": null,
+    "countryOfOrigin": "INDIA",
+    "shelfLifeDays": null,
+    "storageInstructions": null,
+    "maxTemperature": null,
+    "maxTemperatureUOM": null,
+    "minTemperature": null,
+    "minTemperatureUOM": null,
+    "productActivation": true,
+    "productActivationDate": "2019-05-29T00:00:00.000Z",
+    "productPublication": true,
+    "productPublicationDate": "2019-05-29T00:00:00.000Z",
+    "currentApprovalStatus": "Approved",
+    "nextApprovalStatus": "Drafting",
+    "createdAt": "2022-04-23T00:00:00.000Z",
+    "updatedAt": "2022-04-23T00:00:00.000Z",
+    "MedicineGenericProductMedicineGenericProductKey": "a255b346-0502-426e-ad3f-3553a729bb3a"
+}
+```
+
+#### Endpoints
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/all
+GET /nhpr/api/v1/medicines/tradeitems/drafts
+GET /nhpr/api/v1/medicines/tradeitems/approved
+GET /nhpr/api/v1/medicines/tradeitems/active
+GET /nhpr/api/v1/medicines/tradeitems/deactivated
+GET /nhpr/api/v1/medicines/tradeitems/id/:id
+PUT /nhpr/api/v1/medicines/tradeitems/update
+PUT /nhpr/api/v1/medicines/tradeitems/approve/:id
+PUT /nhpr/api/v1/medicines/tradeitems/decline/:id
+PUT /nhpr/api/v1/medicines/tradeitems/deactivate/:id
+PUT /nhpr/api/v1/medicines/tradeitems/activate/:id
+PUT /nhpr/api/v1/medicines/tradeitems/publish/:id
+PUT /nhpr/api/v1/medicines/tradeitems/unpublish/:id
+PUT /nhpr/api/v1/medicines/tradeitems/match/:tradeitemid/:genericproductid
+POST /nhpr/api/v1/medicines/tradeitems/create
+```
