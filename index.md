@@ -551,7 +551,7 @@ The `data` field returns the number of records updated wich is `1`
 }
 ```
 ---------
-#### Trade Items
+### Trade Items
 
 The medication resource represents an actual medication that can be given to a patient and is traded on the market.
 
