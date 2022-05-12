@@ -550,14 +550,14 @@ The `data` field returns the number of records updated wich is `1`
     }
 }
 ```
-
+---------
 #### Trade Items
 
 The medication resource represents an actual medication that can be given to a patient and is traded on the market.
 
 Trade items are products that contain a given generic product. Hence may contain a reference to a generic product.
 
-#### The generic product object
+#### The trade item object
 
 All results of the requests conform to the minimum Data Specifications for the Health Products Registry.
 
