@@ -453,3 +453,100 @@ Request body
     }
 }
 ```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Approve generic product
+Approve generic product data. Generic product key supplied as a route parameter
+
+```markdown
+PUT /nhpr/api/v1/medicines/genericproducts/approve/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Decline generic product
+Decline approval request of generic product data. Generic product key supplied as a route parameter.
+
+```markdown
+PUT /nhpr/api/v1/medicines/genericproducts/decline/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Activate generic product
+Activate a generic product data. Generic product key supplied as a route parameter.
+
+```markdown
+PUT /nhpr/api/v1/medicines/genericproducts/activate/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Deactivate generic product
+Deactivate a generic product data. Generic product key supplied as a route parameter.
+
+```markdown
+PUT /nhpr/api/v1/medicines/genericproducts/deactivate/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
