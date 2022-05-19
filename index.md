@@ -1338,6 +1338,7 @@ The `data` field returns the number of records updated wich is `1`
         ]
     }
 }
+```
 
 ----
 #### Publish trade item
@@ -1360,6 +1361,7 @@ The `data` field returns the number of records updated wich is `1`
         ]
     }
 }
+```
 
 ----
 #### Unublish trade item
@@ -1382,6 +1384,7 @@ The `data` field returns the number of records updated wich is `1`
         ]
     }
 }
+```
 
 ----
 #### Match trade item
@@ -1402,3 +1405,4 @@ The `data` field returns the number of records updated wich is `1`
         ]
     }
 }
+```
