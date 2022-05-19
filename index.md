@@ -624,3 +624,781 @@ PUT /nhpr/api/v1/medicines/tradeitems/unpublish/:id
 PUT /nhpr/api/v1/medicines/tradeitems/match/:tradeitemid/:genericproductid
 POST /nhpr/api/v1/medicines/tradeitems/create
 ```
+----
+#### Create a trade item
+Creates a new trade item object
+
+```markdown
+POST /nhpr/api/v1/medicines/tradeitems/create
+```
+
+###### Mandatory fields
+```markdown
+brandName
+brandOwner
+brandOwnerLocation
+manufacturerName
+manufacturerLocation
+countryOfOrigin
+```
+
+Request body
+```markdown
+{
+    "product": {
+        "ndaRegNumber": "NDA/MAL/HDP/699KLM3",
+        "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+        "ndaExpirationDate": null,
+        "tradeItemDescription": null,
+        "packaging": "1.0X15.0 ML BOTTLE",
+        "content": null,
+        "packMeasure": null,
+        "packCount": null,
+        "unitMeasure": null,
+        "unitCount": null,
+        "unitSize": null,
+        "brandName": "AZIRIV-200",
+        "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+        "brandOwnerLocation": "UGANDA",
+        "brandOwnerGLN": null,
+        "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+        "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+        "manufacturerLocation": "INDIA",
+        "manufacturerGLN": null,
+        "manufacturerPartNUM": null,
+        "countryOfOrigin": "INDIA",
+        "shelfLifeDays": null,
+        "storageInstructions": null,
+        "maxTemperature": null,
+        "maxTemperatureUOM": null,
+        "minTemperature": null,
+        "minTemperatureUOM": null
+    }
+}
+```
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": {
+            "medicineTradeItemKey": "15d97f62-b545-41eb-bfab-a27372d2ce9f",
+            "dataLifePhase": "draft",
+            "matchedToGenericProduct": false,
+            "productActivation": false,
+            "productPublication": false,
+            "currentApprovalStatus": "Drafting",
+            "nextApprovalStatus": "",
+            "ndaRegNumber": "NDA/MAL/HDP/699KLM3",
+            "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+            "ndaExpirationDate": null,
+            "tradeItemDescription": null,
+            "packaging": "1.0X15.0 ML BOTTLE",
+            "content": null,
+            "packMeasure": null,
+            "packCount": null,
+            "unitMeasure": null,
+            "unitCount": null,
+            "unitSize": null,
+            "brandName": "AZIRIV-200",
+            "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+            "brandOwnerLocation": "UGANDA",
+            "brandOwnerGLN": null,
+            "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+            "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+            "manufacturerLocation": "INDIA",
+            "manufacturerGLN": null,
+            "manufacturerPartNUM": null,
+            "countryOfOrigin": "INDIA",
+            "shelfLifeDays": null,
+            "storageInstructions": null,
+            "maxTemperature": null,
+            "maxTemperatureUOM": null,
+            "minTemperature": null,
+            "minTemperatureUOM": null,
+            "updatedAt": "2022-05-19T10:26:10.258Z",
+            "createdAt": "2022-05-19T10:26:10.258Z",
+            "medicineIndexKey": null,
+            "productActivationDate": null,
+            "productPublicationDate": null,
+            "MedicineGenericProductMedicineGenericProductKey": null
+        }
+    }
+}
+```
+
+----
+#### Retrieve trade item
+Retrieves trade item object based on product key supplied as route parameter
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/id/:id
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": {
+            "medicineTradeItemKey": "349c7e76-7e20-4ada-8aad-d511631c3284",
+            "dataLifePhase": "draft",
+            "medicineIndexKey": null,
+            "matchedToGenericProduct": true,
+            "ndaRegNumber": "NDA/MAL/HDP/699KLM77",
+            "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+            "ndaExpirationDate": null,
+            "tradeItemDescription": null,
+            "packaging": "1.0X15.0 ML BOTTLE",
+            "content": null,
+            "packMeasure": null,
+            "packCount": null,
+            "unitMeasure": null,
+            "unitCount": null,
+            "unitSize": null,
+            "brandName": "AZIRIV-200",
+            "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+            "brandOwnerLocation": "UGANDA",
+            "brandOwnerGLN": null,
+            "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+            "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+            "manufacturerLocation": "INDIA",
+            "manufacturerGLN": null,
+            "manufacturerPartNUM": null,
+            "countryOfOrigin": "INDIA",
+            "shelfLifeDays": null,
+            "storageInstructions": null,
+            "maxTemperature": null,
+            "maxTemperatureUOM": null,
+            "minTemperature": null,
+            "minTemperatureUOM": null,
+            "productActivation": false,
+            "productActivationDate": null,
+            "productPublication": false,
+            "productPublicationDate": null,
+            "currentApprovalStatus": "Approved",
+            "nextApprovalStatus": "Drafting",
+            "createdAt": "2022-04-27T10:05:51.619Z",
+            "updatedAt": "2022-05-04T06:28:50.308Z",
+            "MedicineGenericProductMedicineGenericProductKey": "7b20c321-cdf9-4576-857d-b574798559b7",
+            "TradeItemPackagings": [],
+            "ChangeLogs": []
+        }
+    }
+}
+```
+
+----
+#### List all trade items
+Returns a list of trade items.
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/all
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 3763,
+        "products": [
+            {
+                "medicineTradeItemKey": "0002da35-7137-4e19-b86b-312d3c85959c",
+                "dataLifePhase": null,
+                "medicineIndexKey": null,
+                "matchedToGenericProduct": true,
+                "ndaRegNumber": "NDA/MAL/HDP/6992",
+                "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+                "ndaExpirationDate": null,
+                "tradeItemDescription": null,
+                "packaging": "1.0X15.0 ML BOTTLE",
+                "content": null,
+                "packMeasure": null,
+                "packCount": null,
+                "unitMeasure": null,
+                "unitCount": null,
+                "unitSize": null,
+                "brandName": "AZIRIV-200",
+                "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+                "brandOwnerLocation": "UGANDA",
+                "brandOwnerGLN": null,
+                "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+                "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+                "manufacturerLocation": "INDIA",
+                "manufacturerGLN": null,
+                "manufacturerPartNUM": null,
+                "countryOfOrigin": "INDIA",
+                "shelfLifeDays": null,
+                "storageInstructions": null,
+                "maxTemperature": null,
+                "maxTemperatureUOM": null,
+                "minTemperature": null,
+                "minTemperatureUOM": null,
+                "productActivation": true,
+                "productActivationDate": "2019-05-29T00:00:00.000Z",
+                "productPublication": true,
+                "productPublicationDate": "2019-05-29T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-04-23T00:00:00.000Z",
+                "updatedAt": "2022-04-23T00:00:00.000Z",
+                "MedicineGenericProductMedicineGenericProductKey": "a255b346-0502-426e-ad3f-3553a729bb3a"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### List all trade items under drafting
+Returns a list of trade items whose `currentApprovalStatus` is `drafting`. A product is considered to be under drafting if it has not yet been submitted to the approver for review and approval. 
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/drafting
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 7,
+        "products": [
+            {
+                "medicineTradeItemKey": "0002da35-7137-4e19-b86b-312d3c85959c",
+                "dataLifePhase": null,
+                "medicineIndexKey": null,
+                "matchedToGenericProduct": true,
+                "ndaRegNumber": "NDA/MAL/HDP/6992",
+                "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+                "ndaExpirationDate": null,
+                "tradeItemDescription": null,
+                "packaging": "1.0X15.0 ML BOTTLE",
+                "content": null,
+                "packMeasure": null,
+                "packCount": null,
+                "unitMeasure": null,
+                "unitCount": null,
+                "unitSize": null,
+                "brandName": "AZIRIV-200",
+                "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+                "brandOwnerLocation": "UGANDA",
+                "brandOwnerGLN": null,
+                "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+                "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+                "manufacturerLocation": "INDIA",
+                "manufacturerGLN": null,
+                "manufacturerPartNUM": null,
+                "countryOfOrigin": "INDIA",
+                "shelfLifeDays": null,
+                "storageInstructions": null,
+                "maxTemperature": null,
+                "maxTemperatureUOM": null,
+                "minTemperature": null,
+                "minTemperatureUOM": null,
+                "productActivation": true,
+                "productActivationDate": "2019-05-29T00:00:00.000Z",
+                "productPublication": true,
+                "productPublicationDate": "2019-05-29T00:00:00.000Z",
+                "currentApprovalStatus": "Drafting",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-04-23T00:00:00.000Z",
+                "updatedAt": "2022-04-23T00:00:00.000Z",
+                "MedicineGenericProductMedicineGenericProductKey": "a255b346-0502-426e-ad3f-3553a729bb3a"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### List all approved trade items
+Returns a list of trade items whose `currentApprovalSttus` is `approved`. A product's data is considered to be approved if it has been submitted to the approver and is approved.
+
+The approval status is an acknowledgement of the accuracy of the product data by an appropriate user (the approver)
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/approved
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 3760,
+        "products": [
+            {
+                "medicineTradeItemKey": "0002da35-7137-4e19-b86b-312d3c85959c",
+                "dataLifePhase": null,
+                "medicineIndexKey": null,
+                "matchedToGenericProduct": true,
+                "ndaRegNumber": "NDA/MAL/HDP/6992",
+                "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+                "ndaExpirationDate": null,
+                "tradeItemDescription": null,
+                "packaging": "1.0X15.0 ML BOTTLE",
+                "content": null,
+                "packMeasure": null,
+                "packCount": null,
+                "unitMeasure": null,
+                "unitCount": null,
+                "unitSize": null,
+                "brandName": "AZIRIV-200",
+                "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+                "brandOwnerLocation": "UGANDA",
+                "brandOwnerGLN": null,
+                "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+                "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+                "manufacturerLocation": "INDIA",
+                "manufacturerGLN": null,
+                "manufacturerPartNUM": null,
+                "countryOfOrigin": "INDIA",
+                "shelfLifeDays": null,
+                "storageInstructions": null,
+                "maxTemperature": null,
+                "maxTemperatureUOM": null,
+                "minTemperature": null,
+                "minTemperatureUOM": null,
+                "productActivation": true,
+                "productActivationDate": "2019-05-29T00:00:00.000Z",
+                "productPublication": true,
+                "productPublicationDate": "2019-05-29T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-04-23T00:00:00.000Z",
+                "updatedAt": "2022-04-23T00:00:00.000Z",
+                "MedicineGenericProductMedicineGenericProductKey": "a255b346-0502-426e-ad3f-3553a729bb3a"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### List all active trade items
+Returns a list of trade items whose `productActivation` is `true` _(for active)_ . A product is considered to be active if it has been submitted to the approver and is approved and activated.
+
+The active status is an indication that the product is in active use and traded within the country.
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/active
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 3759,
+        "products": [
+            {
+                "medicineTradeItemKey": "0002da35-7137-4e19-b86b-312d3c85959c",
+                "dataLifePhase": null,
+                "medicineIndexKey": null,
+                "matchedToGenericProduct": true,
+                "ndaRegNumber": "NDA/MAL/HDP/6992",
+                "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+                "ndaExpirationDate": null,
+                "tradeItemDescription": null,
+                "packaging": "1.0X15.0 ML BOTTLE",
+                "content": null,
+                "packMeasure": null,
+                "packCount": null,
+                "unitMeasure": null,
+                "unitCount": null,
+                "unitSize": null,
+                "brandName": "AZIRIV-200",
+                "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+                "brandOwnerLocation": "UGANDA",
+                "brandOwnerGLN": null,
+                "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+                "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+                "manufacturerLocation": "INDIA",
+                "manufacturerGLN": null,
+                "manufacturerPartNUM": null,
+                "countryOfOrigin": "INDIA",
+                "shelfLifeDays": null,
+                "storageInstructions": null,
+                "maxTemperature": null,
+                "maxTemperatureUOM": null,
+                "minTemperature": null,
+                "minTemperatureUOM": null,
+                "productActivation": true,
+                "productActivationDate": "2019-05-29T00:00:00.000Z",
+                "productPublication": true,
+                "productPublicationDate": "2019-05-29T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-04-23T00:00:00.000Z",
+                "updatedAt": "2022-04-23T00:00:00.000Z",
+                "MedicineGenericProductMedicineGenericProductKey": "a255b346-0502-426e-ad3f-3553a729bb3a"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### List all deactivated trade items
+Returns a list of trade items whose `productActivation` is `false` _(for deactivated)_. A product is considered to be deactivated if it has not yet be activated by an approver or was previously active then deactivated by the approver.
+
+The product is then considered to not be in active use or not traded in the country.
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/deactivated
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 4,
+        "products": [
+            {
+                "medicineTradeItemKey": "21b16ce4-86fe-4d8d-a1f9-7de68ae045f0",
+                "dataLifePhase": "draft",
+                "medicineIndexKey": null,
+                "matchedToGenericProduct": false,
+                "ndaRegNumber": "NDA/MAL/HDP/699KLM4",
+                "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+                "ndaExpirationDate": null,
+                "tradeItemDescription": null,
+                "packaging": "1.0X15.0 ML BOTTLE",
+                "content": null,
+                "packMeasure": null,
+                "packCount": null,
+                "unitMeasure": null,
+                "unitCount": null,
+                "unitSize": null,
+                "brandName": "AZIRIV-200",
+                "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+                "brandOwnerLocation": "UGANDA",
+                "brandOwnerGLN": null,
+                "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+                "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+                "manufacturerLocation": "INDIA",
+                "manufacturerGLN": null,
+                "manufacturerPartNUM": null,
+                "countryOfOrigin": "INDIA",
+                "shelfLifeDays": null,
+                "storageInstructions": null,
+                "maxTemperature": null,
+                "maxTemperatureUOM": null,
+                "minTemperature": null,
+                "minTemperatureUOM": null,
+                "productActivation": false,
+                "productActivationDate": null,
+                "productPublication": false,
+                "productPublicationDate": null,
+                "currentApprovalStatus": "Declined",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-04-30T06:10:09.713Z",
+                "updatedAt": "2022-04-30T06:19:01.510Z",
+                "MedicineGenericProductMedicineGenericProductKey": null
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### List all matched trade items
+Returns a list of trade items whose that are currently associated to a generic product.
+
+Matched trade items have the field `matchedToGenericProduct` _(Boolean)_ set to `true` and have a valid `uuidv4` string in the field `MedicineGenericProductMedicineGenericProductKey` which is the `MedicineGenericProductKey` of the generic product.
+
+```markdown
+GET /nhpr/api/v1/medicines/tradeitems/matched
+```
+
+Response body
+```markdown
+{
+    "success": true,
+    "data": {
+        "count": 3761,
+        "products": [
+            {
+                "medicineTradeItemKey": "0002da35-7137-4e19-b86b-312d3c85959c",
+                "dataLifePhase": null,
+                "medicineIndexKey": null,
+                "matchedToGenericProduct": true,
+                "ndaRegNumber": "NDA/MAL/HDP/6992",
+                "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+                "ndaExpirationDate": null,
+                "tradeItemDescription": null,
+                "packaging": "1.0X15.0 ML BOTTLE",
+                "content": null,
+                "packMeasure": null,
+                "packCount": null,
+                "unitMeasure": null,
+                "unitCount": null,
+                "unitSize": null,
+                "brandName": "AZIRIV-200",
+                "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+                "brandOwnerLocation": "UGANDA",
+                "brandOwnerGLN": null,
+                "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+                "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+                "manufacturerLocation": "INDIA",
+                "manufacturerGLN": null,
+                "manufacturerPartNUM": null,
+                "countryOfOrigin": "INDIA",
+                "shelfLifeDays": null,
+                "storageInstructions": null,
+                "maxTemperature": null,
+                "maxTemperatureUOM": null,
+                "minTemperature": null,
+                "minTemperatureUOM": null,
+                "productActivation": true,
+                "productActivationDate": "2019-05-29T00:00:00.000Z",
+                "productPublication": true,
+                "productPublicationDate": "2019-05-29T00:00:00.000Z",
+                "currentApprovalStatus": "Approved",
+                "nextApprovalStatus": "Drafting",
+                "createdAt": "2022-04-23T00:00:00.000Z",
+                "updatedAt": "2022-04-23T00:00:00.000Z",
+                "MedicineGenericProductMedicineGenericProductKey": "a255b346-0502-426e-ad3f-3553a729bb3a"
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
+
+----
+#### Update trade item
+Update trade itme data.
+The complete trade itme data with the product id (medicineTradeItemKey)
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/update
+```
+
+Request body
+```markdown
+{
+    "product": {
+        "medicineTradeItemKey": "349c7e76-7e20-4ada-8aad-d511631c3284",
+        "dataLifePhase": "draft",
+        "matchedToGenericProduct": false,
+        "productActivation": false,
+        "productPublication": false,
+        "currentApprovalStatus": "Drafting",
+        "nextApprovalStatus": "",
+        "ndaRegNumber": "NDA/MAL/HDP/699KLM77",
+        "ndaRegistrationDate": "2019-05-29T00:00:00.000Z",
+        "ndaExpirationDate": null,
+        "tradeItemDescription": null,
+        "packaging": "1.0X15.0 ML BOTTLE",
+        "content": null,
+        "packMeasure": null,
+        "packCount": null,
+        "unitMeasure": null,
+        "unitCount": null,
+        "unitSize": null,
+        "brandName": "AZIRIV-200",
+        "brandOwner": "ROYAL PHARMA 2011 LIMITED",
+        "brandOwnerLocation": "UGANDA",
+        "brandOwnerGLN": null,
+        "manufacturerName": "EAST AFRICAN (INDIA) OVERSEAS-PLOT NO.1, PHARMACITY SELAQUI  DEHRADUN – 248011 (U.K), INDIA",
+        "manufacturerShortName": "ROYAL PHARMA 2011 LIMITED",
+        "manufacturerLocation": "INDIA",
+        "manufacturerGLN": null,
+        "manufacturerPartNUM": null,
+        "countryOfOrigin": "INDIA",
+        "shelfLifeDays": null,
+        "storageInstructions": null,
+        "maxTemperature": null,
+        "maxTemperatureUOM": null,
+        "minTemperature": null,
+        "minTemperatureUOM": null,
+        "updatedAt": "2022-04-27T10:05:51.619Z",
+        "createdAt": "2022-04-27T10:05:51.619Z",
+        "medicineIndexKey": null,
+        "productActivationDate": null,
+        "productPublicationDate": null,
+        "MedicineGenericProductMedicineGenericProductKey": null
+    }
+}
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Approve trade items
+Approve trade item data. trade item product key supplied as a route parameter
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/approve/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Decline trade item
+Decline approval request of trade item data. Trade item product key supplied as a route parameter.
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/decline/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Activate trade item
+Activate a trade item data. Trade item product key supplied as a route parameter.
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/activate/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+```
+
+----
+#### Deactivate trade item
+Deactivate a trade item data. Trade item key supplied as a route parameter.
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/deactivate/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+
+----
+#### Publish trade item
+Deactivate a trade item data. Trade item key supplied as a route parameter.
+
+Publishing a trade item make the trade item data available on the public portal.
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/publish/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+
+----
+#### Unublish trade item
+Deactivate a trade item data. Trade item key supplied as a route parameter.
+
+Unpublishing a trade item make the trade item data unavailable on the public portal.
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/unpublish/:id
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
+
+----
+#### Match trade item
+Match a trade item to generic product. Trade item and generic product keys are supplied as route parameters.
+
+```markdown
+PUT /nhpr/api/v1/medicines/tradeitems/match/:tradeitemid/:genericproductid
+```
+
+Response body
+The `data` field returns the number of records updated wich is `1`
+```markdown
+{
+    "success": true,
+    "data": {
+        "product": [
+            1
+        ]
+    }
+}
