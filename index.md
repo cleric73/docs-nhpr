@@ -1364,7 +1364,7 @@ The `data` field returns the number of records updated wich is `1`
 ```
 
 ----
-#### Unublish trade item
+#### Unpublish trade item
 Deactivate a trade item data. Trade item key supplied as a route parameter.
 
 Unpublishing a trade item make the trade item data unavailable on the public portal.
