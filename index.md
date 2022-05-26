@@ -1406,9 +1406,3 @@ The `data` field returns the number of records updated wich is `1`
     }
 }
 ```
-
-#### Substance
-The substance resource is the HL7 FHIR representation of a generic product.
-The results of the paths are formatted to the HL7 FHIR standard as accurately as possible.
-Only GET paths are available for this resource as they are system generated from Generic Product data.
-_ref_ HL7 FHIR Substance resource specification
