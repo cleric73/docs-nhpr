@@ -5,16 +5,13 @@ The NHPR API is organized around REST. Our API has predictable resource-oriented
 
 ### Contents
 
-1. Authorization
-2. Errors
-3. Product identifications
-4. Core resources
+1. Errors
+2. Product identifications
+3. Core resources
 - Generic product
 - Trade item
 - Substance
 - Medication
-
-### Authorization
 
 
 ### Errors
@@ -37,6 +34,12 @@ Errors can be programatically tracked by the `success` field of the response bod
 NHPR uses `uuidv4` for all generated product unique identifiers.
 
 ### Core Resources
+
+Base URL
+
+```
+https://nhpr-staging-api.health.go.ug
+```
 
 #### Generic Products
 
